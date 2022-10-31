@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: HoangMH1-Infrastructure Creation
+Resources:
+  EC2Server:
+    Type: AWS::EC2::Instance
+    Properties:
+      SecurityGroups: !Ref InstanceSecurityGroup
+      ImageId: "ami-017fecd1353bcc96e"
+      KeyName: hoangmh1_keypair
+      InstanceType: t3.micro
+
+  InstanceSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable SSH access via port 22
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: 0.0.0.0/0
