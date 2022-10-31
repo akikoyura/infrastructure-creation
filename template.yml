@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description: HoangMH1-Infrastructure Creation
+Description: HoangMH1 infrastructure creation
 Resources:
   EC2Server:
     Type: AWS::EC2::Instance
