@@ -4,7 +4,8 @@ Resources:
   EC2Server:
     Type: AWS::EC2::Instance
     Properties:
-      SecurityGroups: !Ref InstanceSecurityGroup
+      SecurityGroups:
+        - !Ref InstanceSecurityGroup
       ImageId: "ami-017fecd1353bcc96e"
       KeyName: hoangmh1_keypair
       InstanceType: t3.micro
