@@ -12,7 +12,7 @@ jobs:
             aws cloudformation deploy \
             --template-file template.yml \
             --stack-name HoangMH1-${CIRCLE_WORKFLOW_ID:0:5} \
-            --region us-east-1
+            --region us-west-2
 
 workflows:
   myWorkflow:
